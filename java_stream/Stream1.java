@@ -2,6 +2,7 @@ package java_stream;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 public class Stream1 {
    public static void main(String[] args) {
        try {
@@ -10,11 +11,13 @@ public class Stream1 {
        } catch (Exception e) {
            System.out.println("Error!");
        }
-       //Scanner sc = new Scanner(System.in);
-       //int n = sc.nextInt();
-       //System.out.println(n);
-       //sc.close();
-       //Your Code here
+       List<String> words = Arrays.asList("Oracle", "Java", "Magazine");
+       List<Integer> wordLengths = 
+          words.stream()
+               .map(String::length)
+               .collect(Collectors.toList());
+
+        System.out.println(wordLengths);
        
    }
 }
