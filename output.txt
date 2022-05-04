@@ -1,1 +1,3 @@
-[6, 4, 8]
+Testing the instance method1
+Testing the instance method2
+Testing the instance method3

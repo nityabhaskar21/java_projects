@@ -20,11 +20,6 @@ public class LcsLength {
        } catch (Exception e) {
            System.out.println("Error!");
        }
-       //Scanner sc = new Scanner(System.in);
-       //int n = sc.nextInt();
-       //System.out.println(n);
-       //sc.close();
-       //Your Code here
 
        Scanner sc = new Scanner(System.in);
        String a = sc.next();

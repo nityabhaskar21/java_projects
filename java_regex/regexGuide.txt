@@ -1,0 +1,1 @@
+Use \A and \z to match the start and end of the string, ^ and $ match the start/end of a line.
