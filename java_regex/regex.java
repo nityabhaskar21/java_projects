@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class regex {
     public static void main(String[] args) {
         String regex = "\\b(\\w+)(?:\\W+\\1\\b)+";
+
+        //abc abc
         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE/* Insert the correct Pattern flag here.*/);
 
         Scanner in = new Scanner(System.in);
