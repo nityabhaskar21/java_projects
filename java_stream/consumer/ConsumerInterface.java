@@ -1,4 +1,4 @@
-package java_stream;
+package java_stream.consumer;
 
 import java.util.Arrays;
 import java.util.Map;

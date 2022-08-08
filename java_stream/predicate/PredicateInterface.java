@@ -1,4 +1,4 @@
-package java_stream;
+package java_stream.predicate;
 
 import java.util.List;
 import java.util.function.Predicate;

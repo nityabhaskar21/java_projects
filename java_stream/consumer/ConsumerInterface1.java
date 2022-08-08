@@ -1,4 +1,4 @@
-package java_stream;
+package java_stream.consumer;
 
 import java.io.*;
 import java.util.*;
