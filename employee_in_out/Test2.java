@@ -61,7 +61,7 @@ public class Test2 {
 
                     Date defaultTime = new Date();
                     try {
-                        defaultTime = formatter.parse("00:00:00");
+                        defaultTime = formatter.parse("24:00:00");
                     } catch (ParseException e) {
                         System.out.println("Wrong time format");
                     }
