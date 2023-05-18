@@ -59,10 +59,6 @@ public class Test2 {
                 if (v.get("entry_type").equals("IN")) {
                     System.out.print("no_of_entries:"+v.get("no_of_entries")+"+");
 
-                    odc=Math.abs((long)v.get("odc"));
-                    minutes = (int) (((long)odc / (1000*60)) % 60);
-                    hours   = (int) (((long)odc / (1000*60*60)) % 24);
-
                     Date defaultTime = new Date();
                     try {
                         defaultTime = formatter.parse("00:00:00");
