@@ -3,7 +3,7 @@ import java.util.*;
 import java.io.*;
 import java.text.*;
 
-public class Test {
+public class Test2 {
     public static void main(String[] args) {
         BufferedReader reader;
         try {
@@ -13,13 +13,14 @@ public class Test {
             String time="";
             String type="";
             Map<String,Map<String,Object>> map=new HashMap<>();
+            DateFormat formatter = new SimpleDateFormat("hh:mm:ss");
+
             while (st != null)
             {
                 id=st.split(",")[0];
                 time=st.split(",")[1];
                 type=st.split(",")[2];
 
-                DateFormat formatter = new SimpleDateFormat("hh:mm:ss");
                 System.out.println("id:"+id+", time:"+time+", type:"+type);
                 Date time_date = formatter.parse(time);
 
@@ -31,20 +32,17 @@ public class Test {
                         HashMap<String, Object> tmpMap =new HashMap<>();
                         tmpMap.putAll(map.get(id));
                         var totalOdc=time_date.getTime()-((Date)(map.get(id).get("last_time"))).getTime() + (long)map.get(id).get("odc");
-                        // System.out.println("totalOdc"+totalOdc);
                         int currTimes=(int)map.get(id).get("no_of_entries")+1;
                         tmpMap.put("odc", totalOdc);
                         tmpMap.put("entry_type",type);
                         tmpMap.put("last_time", time_date);
                         tmpMap.put("no_of_entries", currTimes);
-                        // System.out.println(tmpMap);
                         map.put(id, tmpMap);
                     } else {
                         HashMap<String, Object> tmpMap =new HashMap<>();
                         tmpMap.putAll(map.get(id));
                         tmpMap.put("entry_type",type);
                         tmpMap.put("last_time", time_date);
-                        // System.out.println(tmpMap);
                         map.put(id, tmpMap);
                     }
                 }   
@@ -53,16 +51,37 @@ public class Test {
 
             map.forEach((k, v) -> {
                 System.out.print("\nid:"+k+", ");
+
+                long odc = 0l;
+                int minutes = 0;
+                int hours   = 0;
                 
                 if (v.get("entry_type").equals("IN")) {
                     System.out.print("no_of_entries:"+v.get("no_of_entries")+"+");
+
+                    odc=Math.abs((long)v.get("odc"));
+                    minutes = (int) (((long)odc / (1000*60)) % 60);
+                    hours   = (int) (((long)odc / (1000*60*60)) % 24);
+
+                    Date defaultTime = new Date();
+                    try {
+                        defaultTime = formatter.parse("00:00:00");
+                    } catch (ParseException e) {
+                        System.out.println("Wrong time format");
+                    }
+                    var totalOdc = defaultTime.getTime()-((Date)(v.get("last_time"))).getTime() + (long)v.get("odc");
+                    odc=Math.abs(totalOdc);
+                    minutes = (int) (((long)odc / (1000*60)) % 60);
+                    hours   = (int) (((long)odc / (1000*60*60)) % 24);
+                    System.out.println(", hours:" + hours+" minutes:" + minutes);
                 } else {
                     System.out.print("no_of_entries:"+v.get("no_of_entries"));
+                    odc=Math.abs((long)v.get("odc"));
+                    minutes = (int) (((long)odc / (1000*60)) % 60);
+                    hours   = (int) (((long)odc / (1000*60*60)) % 24);
+                    System.out.println(", hours:" + hours+" minutes:" + minutes);
                 }
-                var odc=Math.abs((long)v.get("odc"));
-                int minutes = (int) (((long)odc / (1000*60)) % 60);
-                int hours   = (int) (((long)odc / (1000*60*60)) % 24);
-                System.out.println(", hours:" + hours+" minutes:" + minutes);
+                
             });
             
         } catch(Exception e) {
