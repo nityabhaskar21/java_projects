@@ -7,7 +7,7 @@ public class Test {
     public static void main(String[] args) {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("E:\\java_projects\\employee_in_out\\data.txt"));
+            reader = new BufferedReader(new FileReader("F:\\coding\\java_projects\\employee_in_out\\data.txt"));
 			String st = reader.readLine();
             String id="";
             String time="";
@@ -15,9 +15,10 @@ public class Test {
             Map<String,Map<String,Object>> map=new HashMap<>();
             while (st != null)
             {
-                id=st.split(",")[0];
-                time=st.split(",")[1];
-                type=st.split(",")[2];
+                var arr=st.split(",");
+                id=arr[0];
+                time=arr[1];
+                type=arr[2];
 
                 DateFormat formatter = new SimpleDateFormat("hh:mm:ss");
                 System.out.println("id:"+id+", time:"+time+", type:"+type);
