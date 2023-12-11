@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Test3 {
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("F:\\coding\\java_projects\\employee_in_out\\data.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("E:\\java_projects\\employee_in_out\\data.txt"))) {
             String line;
             Map<String, Map<String, Object>> map = new HashMap<>();
             DateFormat formatter = new SimpleDateFormat("hh:mm:ss");
