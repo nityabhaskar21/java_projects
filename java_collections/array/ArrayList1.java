@@ -1,4 +1,4 @@
-package java_collections;
+package java_collections.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ArrayListCopy {
+public class ArrayList1 {
     public static void main(String[] args) {
         List<Integer> l1 = new ArrayList<Integer>();
         l1.add(1);
