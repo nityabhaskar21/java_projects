@@ -1,0 +1,42 @@
+Generally, String is a sequence of characters. 
+But in Java, string is an object that represents a sequence of characters. 
+The java.lang.String class is used to create a string object.
+
+How to create a string object?
+There are two ways to create String object:
+    By string literal
+    By new keyword
+
+String objects are stored in a special memory area known as the "string constant pool".
+
+Why Java uses the concept of String literal?
+-> To make Java more memory efficient (because no new objects are created if it exists already in the string constant pool).
+
+String constructors:-
+    String()
+    String(String str)
+    String(char chars[ ])
+    String(char chars[ ], int startIndex, int count)
+    String(byte byteArr[ ])
+    String(byte byteArr[ ], int startIndex, int count)
+
+
+String methods:-
+    isEmpty() - This method is used to check that the string is empty or not.
+    length() - The number of characters in a string is called length of a string
+    replace() - It replaces all the old char or CharSequence to new char or CharSequence
+    toUpperCase() - The toUpperCase() method converts all the lowercase letters of a string into upper case and returns that upper-cased string
+    toLowerCase() - This method converts all the uppercase letters of a string into lower case and returns that lower-cased string.
+    charAt() - The charAt() method returns the character located at specified index.
+    trim() - This trim() method removes spaces from the beginning and ending from a string.
+    substring() - This method returns a new string that is a substring of this string.
+    contains() - This method returns true if this string contains the specified sequence of char value
+    compareTo() - This method compares two strings and to know which is bigger or smaller. 
+    compareToIgnoreCase() - It is same as compareTo() method. This method does not take the case of strings into consideration.
+    equals() - This method returns true if two strings are equal or same.
+    equalsIgnoreCase() - same as equals() method, but it does case-insensitive comparison.
+    startsWith() - This method returns true if a string starts with the specified substring s.
+    endsWith() - returns true if a string ends with the specified substring s, otherwise, it returns false.
+    indexOf() - This method is used to get index of the first occurrence of specified substring in the main string
+    lastIndexOf() - returns the last occurrence of substring str in the main string
+    String[] split() - This method is used to break a string into pieces at the place represented by the delimiter
