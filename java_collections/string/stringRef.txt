@@ -38,5 +38,6 @@ String methods:-
     startsWith() - This method returns true if a string starts with the specified substring s.
     endsWith() - returns true if a string ends with the specified substring s, otherwise, it returns false.
     indexOf() - This method is used to get index of the first occurrence of specified substring in the main string
-    lastIndexOf() - returns the last occurrence of substring str in the main string
+                returns -1 if not found.
+    lastIndexOf() - returns the last occurrence of substring str in the main string returns -1 if not found.
     String[] split() - This method is used to break a string into pieces at the place represented by the delimiter
