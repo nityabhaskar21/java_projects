@@ -1,0 +1,53 @@
+Java collections framework provides three general-purpose Set implementations: HashSet, TreeSet, and LinkedHashSet.
+
+HashSet is a concrete class that implements set interface. It uses a hash table mechanism to store its elements. 
+It is the best-performing implementation.
+
+TreeSet is a concrete class that implements SortedSet interface (a subinterface of set). 
+It uses a binary search tree mechanism to store its elements. 
+It orders its elements based on their values. It is considerably slower than HashSet.
+
+LinkedHashSet is a concrete class that extends HashSet class. 
+It stores its elements using hash table mechanism with a linked list implementation.
+It orders its elements based on the order in which they were inserted into the set. 
+That is, elements in the HashSet are not ordered but elements in the LinkedHashSet 
+can be retrieved in the order in which they were inserted into the set.
+
+Methods
+boolean add(Object o)	-> It is used to add the specified element in this set.
+boolean addAll(Collection c)	-> This method adds all the elements in the given collection.
+int size()	-> It is used to get the number of elements in the set.
+boolean isEmpty()	-> This method checks that the set is empty or not.
+void clear()	-> It is used to remove all the elements from the set.
+boolean contains(Object o)	-> This method returns true if this set contains the given element.
+boolean containsAll(Collection c) -> This method returns true if this set contains all the elements of the given collection.
+boolean remove(Object o)	-> It is used to remove the specified element from this set.
+boolean removeAll(Collection c)	-> It removes all the elements in the given collection from the set.
+Iterator iterate()	-> It returns an Iterator over the elements in this set.
+boolean equals(Object o)	-> It is used to compare the given element for equility in this set.
+int hashCode()	-> It is used to get the hashCode value for this set.
+
+
+HashSet faster due to the use of hashing technique and gives constant-time performance 
+HashSet class is not synchronized which means it is not thread-safe. 
+Therefore, multiple threads can use the same HashSet object at the same time and 
+will not give the deterministic final outputfor adding (insertion), retrieval, removal, contains, and size operations.
+
+LinkedHashSet can be used when you do not want duplicate elements (i.e. want to remove duplicate elements) and 
+want to maintain order in which elements are inserted.
+
+Java TreeSet contains unique elements similar to the HashSet.
+Java TreeSet implements SortedSet interface. 
+It is a collection for storing a set of unique elements (objects) according to their natural ordering.
+
+Important Methods Defined by SortedSet Interface
+Since Java TreeSet implements SortedSet interface, all the methods defined by SortedSet interface can be used while using TreeSet class. They are as:
+
+1. Object first(): It is used to get the first (lowest) element currently in the sorted set.
+2. Object last(): This method returns the last (highest) element currently in the sorted set.
+3. Comparator comparator(): It returns comparator that is used to order elements in the set. 
+    If the TreeSet uses the natural ordering, this method returns null.
+4. SortedSet headSet(Object toObject): This method returns the collection of elements that are less than the specified element.
+5. SortedSet subSet(Object fromElement, Object toElement): It returns elements from the set that lie between the given range 
+    in which fromElement is included and toElement is excluded.
+6. SortedSet tailSet(Object fromElement): It returns elements from the set that is greater than or equal to the specified element.
