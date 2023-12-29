@@ -41,3 +41,6 @@ String methods:-
                 returns -1 if not found.
     lastIndexOf() - returns the last occurrence of substring str in the main string returns -1 if not found.
     String[] split() - This method is used to break a string into pieces at the place represented by the delimiter
+    concat() -  This method concatenates (joins) two strings and returns it.
+    matches() - This method checks whether the string matches the given regular expression or not.
+    toCharArray() - This method returns a char array splitting the string.
