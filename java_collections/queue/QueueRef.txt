@@ -1,0 +1,28 @@
+The Queue interface of the Java collections framework provides the functionality of the queue data structure. 
+It extends the Collection interface.
+
+Classes that Implement Queue
+    ArrayDeque
+    LinkedList
+    PriorityQueue
+
+Interfaces that extend Queue
+    Deque
+    BlockingQueue
+    BlockingDeque
+
+The Queue interface includes all the methods of the Collection interface. 
+It is because Collection is the super interface of Queue.
+
+Some of the commonly used methods of the Queue interface are:
+
+add(e) - Inserts the specified element into the queue. If the task is successful, add() returns true, 
+            if not it throws an exception.
+offer(e) - Inserts the specified element into the queue. If the task is successful, offer() returns true, 
+            if not it returns false.
+element() - Returns the head of the queue. Throws an exception if the queue is empty.
+peek() - Returns the head of the queue. Returns null if the queue is empty.
+remove() - Returns and removes the head of the queue. Throws an exception if the queue is empty.
+poll() - Returns and removes the head of the queue. Returns null if the queue is empty.
+
+offer(e), peek(), poll() preferred because it doesn't throw exception.
