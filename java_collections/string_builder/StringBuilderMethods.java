@@ -13,7 +13,8 @@ public class StringBuilderMethods {
         System.out.println(sb.charAt(1));//e
 
         //delete
-        StringBuilder sb3 = sb.delete(1,3);  //also we have sb.delete(2) i.e. single index.
+        StringBuilder sb3 = sb.delete(1,3);  //including index 1 but excluding index 3 
+        //also we have sb.delete(2) i.e. single index.
         System.out.println(sb);//Hlo Java  
         System.out.println(sb2);//Hlo Java , Since sb2 also pointing to same object
         System.out.println(sb3);//Hlo Java 
