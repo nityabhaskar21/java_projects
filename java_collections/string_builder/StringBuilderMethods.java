@@ -9,6 +9,9 @@ public class StringBuilderMethods {
         System.out.println(sb);//prints Hello Java  
         System.out.println(sb2);//prints Hello Java  
 
+
+        //
+
         //charAt
         System.out.println(sb.charAt(1));//e
 
@@ -42,6 +45,12 @@ public class StringBuilderMethods {
 
         //length
         System.out.println(sb.length());
+
+        // appendCodePoint
+        StringBuilder m=new StringBuilder("Scaler");
+        StringBuilder m2 = m.appendCodePoint(97); //Appending the character "a" (97) to the sequence.
+        System.out.println(m);//Scalera
+        System.out.println(m2);//Scalera
 
     }
 }
