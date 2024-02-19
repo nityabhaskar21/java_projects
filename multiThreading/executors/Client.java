@@ -7,7 +7,7 @@ public class Client {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         for (int i = 0; i < 100; i++) {
-            Thread1 task = new Thread1(i);
+            Runnable task = new Thread1(i);
             executor.execute(task);
         }
         //Stops the thread even tasks not completed yet
