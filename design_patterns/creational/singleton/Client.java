@@ -1,4 +1,4 @@
-package design_patterns.creational;
+package design_patterns.creational.singleton;
 
 public class Client {
     public static void main(String[] args) {
