@@ -16,6 +16,9 @@ It is because Collection is the super interface of Queue.
 
 Some of the commonly used methods of the Queue interface are:
 
+boolean isEmpty() - This method is used to check if the queue is empty or not.
+int size() - This method is used to return the size of the queue.
+boolean contains(element) - This method is used to check if the queue contains the given element or not.
 boolean add(e) - Inserts the specified element into the queue. If the task is successful, add() returns true, 
             if not it throws an exception.
 boolean offer(e) - Inserts the specified element into the queue. If the task is successful, offer() returns true, 
