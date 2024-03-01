@@ -20,5 +20,6 @@ public String substring(int beginIndex, int endIndex) - It is used to retrieve t
 public int indexof(String) - returns the first index of the given String in the sequence if it is present, Otherwise this method returns -1.
 public int lastIndexof(String) - returns the first index of the given String in the sequence if it is present, Otherwise this method returns -1.
 public boolean isEmpty() - This method is used to check whether the StringBuilder object contains any sequence or not.
+public void setCharAt(int index, char ch) - used to add/insert the character at the specified index.
 
 toString() - Converts the StringBuilder object to String.
