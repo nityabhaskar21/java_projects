@@ -19,6 +19,5 @@ public class DateToLocalDateTime {
         Date d1 = Date.from(l.atZone(ZoneId.systemDefault()).toInstant());
         System.out.println("Date: " + d1);
 
-
     }
 }
