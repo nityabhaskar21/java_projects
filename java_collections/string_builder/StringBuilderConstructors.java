@@ -10,6 +10,7 @@ public class StringBuilderConstructors {
         StringBuilder ob2 = new StringBuilder(10);
         //This constructor is used for creating a StringBuilder object with no characters in it 
         //and an initial capacity specified by the capacity argument.
+        System.out.println(ob2.toString());
 
         CharSequence seq = "Scaler";
         StringBuilder sb3 = new StringBuilder(seq);
