@@ -1,0 +1,17 @@
+Methods                       Description
+
+boolean isLetter(char ch)     This method returns true if it is a character ([A-Z], [a-z]), false otherwise.
+
+boolean isDigit(char ch)      This method is used to determine whether the specified char value(ch) is a digit or not.
+
+boolean isWhitespace(char ch) It determines whether the specified char value(ch) is white space. Whitespace includes space, tab, or newline
+
+boolean isUpperCase(char ch)  It determines whether the specified char value(ch) is uppercase or not
+
+boolean isLowerCase(char ch)  It determines whether the specified char value(ch) is lowercase or not
+
+char toUpperCase(char ch)     It returns the uppercase of the specified char value(ch).If an ASCII value is passed, then the ASCII value of its uppercase will be returned
+
+char toLowerCase(char ch)     It returns the lowercase of the specified char value(ch).
+
+toString(char ch)             It returns one-character string.
