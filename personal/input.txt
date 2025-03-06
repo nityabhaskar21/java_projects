@@ -1,0 +1,8 @@
+A|B|C|D
+Test|1|2|3 split("|")
+Test123|A|B|C|D
+myTest|1234|
+1|2|3|4
+
+
+sb
