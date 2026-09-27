@@ -14,6 +14,12 @@ public class DequeStack {
         stack.push("String3");
         stack.push("String4");
 
+        //Size
+        System.out.println("The size of stack: "+stack.size()); //The size of stack: 4
+
+        //IsEmpty
+        System.out.println("Is stack empty: "+stack.isEmpty()); //Is stack empty: false
+
         //Peek
         System.out.println("The top of stack: "+ stack.peek()); //The top of stack: String4
 
