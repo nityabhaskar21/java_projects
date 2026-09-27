@@ -1,4 +1,4 @@
-package java_stream.function;
+package java_stream.functionalInterfaces.function;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.UnaryOperator;

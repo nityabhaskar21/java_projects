@@ -1,4 +1,4 @@
-package java_stream.supplier;
+package java_stream.functionalInterfaces.supplier;
 
 import java.util.function.Supplier;
 

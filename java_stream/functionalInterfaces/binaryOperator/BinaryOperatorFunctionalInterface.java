@@ -1,4 +1,4 @@
-package java_stream.function;
+package java_stream.functionalInterfaces.binaryOperator;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;

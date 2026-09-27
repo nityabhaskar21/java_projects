@@ -1,4 +1,4 @@
-package java_stream.predicate;
+package java_stream.functionalInterfaces.predicate;
 
 import java.util.Arrays;
 import java.util.List;

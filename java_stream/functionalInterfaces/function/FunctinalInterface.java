@@ -1,4 +1,4 @@
-package java_stream.function;
+package java_stream.functionalInterfaces.function;
 
 @FunctionalInterface
 public interface FunctinalInterface
